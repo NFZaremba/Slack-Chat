@@ -1,0 +1,64 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jest": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:import/recommended",
+		"plugin:react/recommended",
+		"plugin:prettier/recommended"
+	],
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 6,
+		"ecmaFeatures": {
+			"jsx": true,
+			"experimentalObjectRestSpread": true
+		}
+	},
+	"rules": {
+		"prettier/prettier": ["error", {
+			"singleQuote": true
+		}],
+
+		"valid-jsdoc": 2,
+		"react/jsx-uses-react": 1,
+		"react/jsx-no-undef": 2,
+		"react/jsx-wrap-multilines": 2,
+		"react/no-string-refs": 0,
+		"linebreak-style": ["error", "unix"],
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"],
+		"no-console": ["error", {
+			"allow": ["warn", "error", "log"]
+		}],
+		"spaced-comment": ["error", "always", {
+			"line": {
+				"markers": ["/"],
+				"exceptions": ["-", "+"]
+			},
+			"block": {
+				"markers": ["!"],
+				"exceptions": ["*"],
+				"balanced": true
+			}
+		}]
+	},
+	"globals": {
+		"require": false,
+		"global": false,
+		"module": false
+	},
+	"plugins": [
+		"import",
+		"react"
+	],
+	"settings": {
+		"react": {
+			"version": "999.999.99"
+		}
+	}
+}
